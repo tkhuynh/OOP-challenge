@@ -66,4 +66,22 @@ console.log(monster);
 
 ### Stretch Challenge
 ```
+function Vase() {
+  this.vase = [];
+  this.placeFlower = function(flower) {
+    this.vase.push(flower);
+  };
+  this.wilt = function() {
+    for(i=0; i < this.vase.length; i++) {
+      this.vase[i].petals = (this.vase[i].petals - 1);
+    }
+    return this.vase;
+  };
+  this.water = function() {
+    for(i=0; i < this.vase.length; i++) {
+      this.vase[i].petals = (this.vase[i].petals + 1);
+    }
+  return this.vase;
+  };
+}
 ```
